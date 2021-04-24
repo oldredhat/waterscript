@@ -19,7 +19,7 @@ sys.stdout = open("/home/pi/Documents/Week1/Day: " + calendar.day_name[tooday.we
 print('Reading ADS1x15 channel 1 for 5 seconds...')
 print("Date & Time: " + str(datetime.datetime.now()))
 start = time.time()
-while (time.time() - start) <= 180.0:
+while (time.time() - start) <= 10.0:
     value = adc.get_last_result()
     if value <  800:
        print ('too_much_water {0}'.format(value))
